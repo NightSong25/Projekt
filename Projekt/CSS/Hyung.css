@@ -5,45 +5,131 @@ body{
     background:#0b0b0b;
     color:#FF69B4;
     overflow-x:hidden;
+    position:relative;
 }
 
-/* kisebb glow foltok */
-body::before,
-body::after{
-    content:"";
+/* háttér glow container */
+
+.glow-container{
     position:fixed;
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    filter:blur(120px);
+    inset:0;
     z-index:-1;
+    overflow:hidden;
 }
 
-body::before{
+/* kis glow pöttyök */
+
+.glow{
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:0.7;
+}
+
+/* különböző glow pozíciók */
+
+.glow:nth-child(1){
     background:#ff69b4;
-    top:-100px;
-    left:-100px;
+    top:-80px;
+    left:-80px;
     animation:moveGlow1 18s infinite alternate ease-in-out;
 }
 
-body::after{
+.glow:nth-child(2){
     background:#ff2fa8;
-    bottom:-100px;
-    right:-100px;
-    animation:moveGlow2 22s infinite alternate ease-in-out;
+    top:20%;
+    left:70%;
+    animation:moveGlow2 20s infinite alternate ease-in-out;
 }
+
+.glow:nth-child(3){
+    background:#ff69b4;
+    top:70%;
+    left:10%;
+    animation:moveGlow3 22s infinite alternate ease-in-out;
+}
+
+.glow:nth-child(4){
+    background:#ff2fa8;
+    top:50%;
+    left:40%;
+    animation:moveGlow4 19s infinite alternate ease-in-out;
+}
+
+.glow:nth-child(5){
+    background:#ff69b4;
+    top:80%;
+    left:80%;
+    animation:moveGlow5 23s infinite alternate ease-in-out;
+}
+
+.glow:nth-child(6){
+    background:#ff2fa8;
+    top:10%;
+    left:40%;
+    animation:moveGlow6 21s infinite alternate ease-in-out;
+}
+
+.glow:nth-child(7){
+    background:#ff69b4;
+    top:60%;
+    left:65%;
+    animation:moveGlow7 20s infinite alternate ease-in-out;
+}
+
+.glow:nth-child(8){
+    background:#ff2fa8;
+    top:30%;
+    left:15%;
+    animation:moveGlow8 24s infinite alternate ease-in-out;
+}
+
+/* glow animációk */
 
 @keyframes moveGlow1{
 0%{transform:translate(0,0);}
-100%{transform:translate(200px,150px);}
+100%{transform:translate(180px,120px);}
 }
 
 @keyframes moveGlow2{
 0%{transform:translate(0,0);}
-100%{transform:translate(-200px,-150px);}
+100%{transform:translate(-160px,140px);}
+}
+
+@keyframes moveGlow3{
+0%{transform:translate(0,0);}
+100%{transform:translate(120px,-160px);}
+}
+
+@keyframes moveGlow4{
+0%{transform:translate(0,0);}
+100%{transform:translate(-140px,-120px);}
+}
+
+@keyframes moveGlow5{
+0%{transform:translate(0,0);}
+100%{transform:translate(-180px,-140px);}
+}
+
+@keyframes moveGlow6{
+0%{transform:translate(0,0);}
+100%{transform:translate(160px,-120px);}
+}
+
+@keyframes moveGlow7{
+0%{transform:translate(0,0);}
+100%{transform:translate(-120px,160px);}
+}
+
+@keyframes moveGlow8{
+0%{transform:translate(0,0);}
+100%{transform:translate(150px,140px);}
 }
 
 /* kártya elrendezés */
+
 .kartya-container{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -53,29 +139,25 @@ body::after{
 }
 
 /* kártya */
+
 .kartya{
     display:flex;
-    align-items:center;
-    gap:35px;
-
+    align-items:flex-start;
+    gap:30px;
     padding:40px;
     border-radius:25px;
-
     background:rgba(255,255,255,0.05);
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
-
     border:1px solid rgba(255,105,180,0.3);
-
     min-height:320px;
-
     transition:0.3s;
-
     position:relative;
     overflow:hidden;
 }
 
-/* neon glow hover */
+/* hover glow */
+
 .kartya:hover{
     transform:translateY(-15px) scale(1.03);
     animation:pinkGlow 1.5s infinite;
@@ -104,6 +186,7 @@ box-shadow:
 }
 
 /* üveg fénycsík */
+
 .kartya::after{
     content:"";
     position:absolute;
@@ -129,7 +212,8 @@ box-shadow:
 100%{left:150%;}
 }
 
-/* neon sarokcsík */
+/* neon keret */
+
 .kartya::before{
     content:"";
     position:absolute;
@@ -146,57 +230,51 @@ box-shadow:
 }
 
 /* kép */
+
 .kartya img{
-    width:280px;
-    border-radius:18px;
+    width:260px;
+    border-radius:15px;
 }
 
-/* szöveg */
+/* szöveg blokk */
+
 .szoveg{
-    color:#FF69B4;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
 
-/* neon név */
-.szoveg h2{
+/* név */
+
+.kartya h2{
     margin-top:0;
     font-size:32px;
     color:#ff69b4;
-
     text-shadow:
         0 0 5px #ff69b4,
+        0 0 10px #ff69b4;
+    transition:0.3s;
+}
+
+/* név neon hover */
+
+.kartya:hover h2{
+    text-shadow:
         0 0 10px #ff69b4,
         0 0 20px #ff69b4,
-        0 0 40px #ff2fa8;
-
-    animation:nameGlow 2.5s infinite alternate;
+        0 0 40px #ff2fa8,
+        0 0 70px rgba(255,105,180,1);
 }
 
-/* név pulzálás */
-@keyframes nameGlow{
+/* szöveg */
 
-0%{
-text-shadow:
-0 0 5px #ff69b4,
-0 0 10px #ff69b4,
-0 0 20px #ff69b4;
-}
-
-100%{
-text-shadow:
-0 0 10px #ff69b4,
-0 0 20px #ff69b4,
-0 0 40px #ff2fa8,
-0 0 60px rgba(255,105,180,0.8);
-}
-
-}
-
-.szoveg p{
+.kartya p{
     color:#FF69B4;
     font-size:18px;
 }
 
 /* mobil */
+
 @media (max-width:900px){
 
 .kartya-container{
