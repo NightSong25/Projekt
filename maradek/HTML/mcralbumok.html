@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/mcralbumok.css">
+    <title>BandShelf</title>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+
+<div class="container-fluid">
+
+<!-- Menü gomb -->
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="offcanvas"
+data-bs-target="#sidebarMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<a class="navbar-brand ms-2" href="#">BandShelf</a>
+
+
+
+<!-- KERESÉS -->
+
+<form class="d-flex ms-3 me-auto">
+<input class="form-control form-control-sm me-2"
+type="search"
+placeholder="Keresés">
+<button class="btn btn-outline-light btn-sm">
+Keres
+</button>
+</form>
+
+
+
+<!-- PROFIL -->
+
+<div class="dropdown d-flex align-items-center">
+
+<img id="navProfileImage"
+src="https://via.placeholder.com/35"
+class="rounded-circle"
+width="35"
+height="35">
+
+<a href="#"
+class="text-white text-decoration-none dropdown-toggle ms-2"
+data-bs-toggle="dropdown">
+<span id="navProfileName">Kovács Péter</span>
+</a>
+
+
+<ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+
+<li>
+<a class="dropdown-item" href="../HTML/profil.html">
+<i class="bi bi-person me-2"></i>
+Profilom
+</a>
+</li>
+
+<li>
+<a class="dropdown-item" href="../HTML/profil.html#favorites">
+<i class="bi bi-star me-2"></i>
+Kedvencek
+</a>
+</li>
+
+<li>
+<a class="dropdown-item">
+<i class="bi bi-gear me-2"></i>
+Beállítások
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+</nav>
+
+
+
+<!-- SIDEBAR -->
+
+<div class="offcanvas offcanvas-start text-bg-dark"
+tabindex="-1"
+id="sidebarMenu">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title">Menü</h5>
+<button type="button"
+class="btn-close btn-close-white"
+data-bs-dismiss="offcanvas">
+</button>
+</div>
+
+
+<div class="offcanvas-body">
+<ul class="navbar-nav">
+
+<li class="nav-item">
+<a class="nav-link" href="#">
+<i class="bi bi-house me-2"></i>
+Főoldal
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="../HTML/members.html">
+<i class="bi bi-people me-2"></i>
+Stray Kids
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="../HTML/LinkinPark.html">
+<i class="bi bi-music-note me-2"></i>
+Linkin Park
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link">
+<i class="bi bi-music-note me-2"></i>
+My Chemical Romance
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="../RHTML/rmembers.html">
+<i class="bi bi-music-note me-2"></i>
+Bad Omens
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="../HTML/albumok.html">
+<i class="bi bi-disc me-2"></i>
+Albumok
+</a>
+</li>
+</ul>
+
+</div>
+</div>
+
+<section class="album-section">
+  <div class="album-card-wrapper">
+
+<h3 class="album-title">My Chemical Romance Albumok</h3>
+
+<div class="album-grid">
+
+<div class="album-card">
+<img src="../MCRkepek/Bullets.png" alt="I Brought You My Bullets, You Brought Me Your Love">
+<h4>I Brought You My Bullets, You Brought Me Your Love</h4>
+<p>2002</p>
+<div class="tracklist">
+<ul>
+<li>Romance</li>
+<li>Honey, This Mirror Isn't Enough for the Two of Us</li>
+<li>Vampires Will Never Hurt You</li>
+<li>Drowning Lessons</li>
+<li>Our Lady of Sorrows</li>
+<li>Headfirst for Halos</li>
+<li>Skylines and Turnstiles</li>
+<li>Early Sunsets Over Monroeville</li>
+<li>This Is the Best Day Ever</li>
+<li>Cubicles</li>
+<li>Demolition Lovers</li>
+</ul>
+</div>
+</div>
+
+<div class="album-card">
+<img src="../MCRkepek/Revenge.png" alt="Three Cheers for Sweet Revenge">
+<h4>Three Cheers for Sweet Revenge</h4>
+<p>2004</p>
+<div class="tracklist">
+<ul>
+<li>Helena</li>
+<li>Give 'Em Hell, Kid</li>
+<li>To The End</li>
+<li>You Know What They Do to Guys Like Us in Prison</li>
+<li>I'm Not Okay (I Promise)</li>
+<li>The Ghost of You</li>
+<li>The Jetset Life Is Gonna Kill You</li>
+<li>Interlude</li>
+<li>Thank You for the Venom</li>
+<li>Hang 'Em High</li>
+<li>It's Not a Fashion Statement, It's a Fucking Deathwish</li>
+<li>Cemetery Drive</li>
+<li>I Never Told You What I Do for a Living</li>
+<li>Bury Me in Black - Bonus Track</li>
+<li>Desert Song - Bonus Track</li>
+</ul>
+</div>
+</div>
+
+<div class="album-card">
+<img src="../MCRkepek/The_Black_Parade.png" alt="The Black Parade">
+<h4>The Black Parade</h4>
+<p>2006</p>
+<div class="tracklist">
+<ul>
+<li>The End.</li>
+<li>Dead!</li>
+<li>This Is How I Disappear</li>
+<li>The Sharpest Lives</li>
+<li>Welcome to the Black Parade</li>
+<li>I Don't Love You</li>
+<li>House of Wolves</li>
+<li>Cancer</li>
+<li>Mama</li>
+<li>Sleep</li>
+<li>Teenagers</li>
+<li>Disenchanted</li>
+<li>Famous Last Words</li>
+<li>Blood - Hidden Track</li>
+<li>My Way Home is Through You - Bonus Track</li>
+<li>Kill All Your Friends - Bonus Track</li>
+<li>Heaven Help Us - Bonus Track</li>
+</ul>
+</div>
+</div>
+
+<div class="album-card">
+<img src="../MCRkepek/Conventional_Weapons.png" alt="Conventional Weapons">
+<h4>Conventional Weapons</h4>
+<p>2009</p>
+<div class="tracklist">
+<ul>
+<li>Boy Division</li>
+<li>Tomorrow's Money</li>
+<li>AMBULANCE</li>
+<li>Gun.</li>
+<li>The World Is Ugly</li>
+<li>The Light Behind Your Eyes</li>
+<li>Kiss the Ring</li>
+<li>Make Room!!!!</li>
+<li>Surrender the Night</li>
+<li>Burn Bright</li>
+</ul>
+</div>
+</div>
+
+
+<div class="album-card">
+<img src="../MCRkepek/Danger_Days.png" alt="Danger Days: The True Lives of the Fabulous Killjoys">
+<h4>Danger Days: The True Lives of the Fabulous Killjoys</h4>
+<p>2012</p>
+<div class="tracklist">
+<ul>
+<li>Na Na Na (Na Na Na Na Na Na Na Na Na)</li>
+<li>Bulletproof Heart</li>
+<li>SING</li>
+<li>Planetary (GO!)</li>
+<li>The Only Hope for Me Is You</li>
+<li>Party Poison</li>
+<li>Save Yourself, I'll Hold Them Back</li>
+<li>S/C/A/R/E/C/R/O/W</li>
+<li>Summertime</li>
+<li>DESTROYA</li>
+<li>The Kids from Yesterday</li>
+<li>Vampire Money</li>
+<li>Zero Percent - Bonus Track</li>
+<li>We Don't Need Another Song About California - Bonus Track</li>
+</ul>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<script src="../JS/profil.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>  
+</body>
+</html>
